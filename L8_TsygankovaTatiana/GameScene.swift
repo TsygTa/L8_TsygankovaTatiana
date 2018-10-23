@@ -19,6 +19,7 @@ struct CollisionCategories {
 class GameScene: SKScene {
     
     var snake: Snake?
+    var apple: Apple?
     
     override func didMove(to view: SKView) {
         backgroundColor = SKColor.black
@@ -49,9 +50,7 @@ class GameScene: SKScene {
         clockwiseButton.name = "clockwiseButton"
         self.addChild(clockwiseButton)
         createApple()
-        
-        snake = Snake(atPoint: CGPoint(x: view.scene!.frame.midX, y:  view.scene!.frame.midY))
-        self.addChild(snake!)
+        createSnake()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -90,11 +89,16 @@ class GameScene: SKScene {
     }
     
     func createApple() {
-        let randX = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxX-5)) + 1)
-        let randY = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxY-5)) + 1)
+        let randX = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxX-10))+5)
+        let randY = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxY-50))+45)
         
-        let apple = Apple(position: CGPoint(x: randX, y: randY))
-        addChild(apple)
+        apple = Apple(position: CGPoint(x: randX, y: randY))
+        addChild(apple!)
+    }
+    
+    func createSnake() {
+        snake = Snake(atPoint: CGPoint(x: view!.scene!.frame.midX, y:  view!.scene!.frame.midY))
+        self.addChild(snake!)
     }
 }
 
@@ -105,12 +109,15 @@ extension GameScene: SKPhysicsContactDelegate {
         
         switch collisionObject {
             case CollisionCategories.Apple:
-                let apple = contact.bodyA.node is Apple ? contact.bodyA.node : contact.bodyB.node
+//                let apple = contact.bodyA.node is Apple ? contact.bodyA.node : contact.bodyB.node
                 snake?.addBodyPart()
                 apple?.removeFromParent()
                 createApple()
         case CollisionCategories.EdgeBody:
-            break
+            snake?.removeFromParent()
+            apple?.removeFromParent()
+            createApple()
+            createSnake()
         default:
             break
         }

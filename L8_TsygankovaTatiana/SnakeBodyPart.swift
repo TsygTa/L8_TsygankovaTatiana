@@ -22,7 +22,7 @@ class SnakeBodyPart: SKShapeNode {
         self.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(diameter-4), center: CGPoint(x: 5, y: 5))
         self.physicsBody?.isDynamic = true
         self.physicsBody?.categoryBitMask = CollisionCategories.Snake
-        self.physicsBody?.collisionBitMask = CollisionCategories.EdgeBody | CollisionCategories.Apple
+        self.physicsBody?.contactTestBitMask = CollisionCategories.EdgeBody | CollisionCategories.Apple
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
