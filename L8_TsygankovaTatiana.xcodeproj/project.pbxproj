@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		075FD60D217F113800D8277E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD60C217F113800D8277E /* AppDelegate.swift */; };
-		075FD60F217F113900D8277E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 075FD60E217F113900D8277E /* GameScene.sks */; };
-		075FD611217F113900D8277E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 075FD610217F113900D8277E /* Actions.sks */; };
 		075FD613217F113900D8277E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD612217F113900D8277E /* GameScene.swift */; };
 		075FD615217F113900D8277E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD614217F113900D8277E /* GameViewController.swift */; };
 		075FD618217F113900D8277E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075FD616217F113900D8277E /* Main.storyboard */; };
@@ -17,6 +15,10 @@
 		075FD61D217F115500D8277E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075FD61B217F115500D8277E /* LaunchScreen.storyboard */; };
 		075FD628217F115600D8277E /* L8_TsygankovaTatianaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD627217F115600D8277E /* L8_TsygankovaTatianaTests.swift */; };
 		075FD633217F115600D8277E /* L8_TsygankovaTatianaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD632217F115600D8277E /* L8_TsygankovaTatianaUITests.swift */; };
+		075FD641217F2FBA00D8277E /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD640217F2FBA00D8277E /* Apple.swift */; };
+		075FD643217F444500D8277E /* SnakeBodyPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD642217F444500D8277E /* SnakeBodyPart.swift */; };
+		075FD645217F469600D8277E /* SnakeHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD644217F469600D8277E /* SnakeHead.swift */; };
+		075FD647217F477600D8277E /* Snake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FD646217F477600D8277E /* Snake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 /* Begin PBXFileReference section */
 		075FD609217F113800D8277E /* L8_TsygankovaTatiana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = L8_TsygankovaTatiana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075FD60C217F113800D8277E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		075FD60E217F113900D8277E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		075FD610217F113900D8277E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		075FD612217F113900D8277E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		075FD614217F113900D8277E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		075FD617217F113900D8277E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +53,10 @@
 		075FD62E217F115600D8277E /* L8_TsygankovaTatianaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L8_TsygankovaTatianaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		075FD632217F115600D8277E /* L8_TsygankovaTatianaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L8_TsygankovaTatianaUITests.swift; sourceTree = "<group>"; };
 		075FD634217F115600D8277E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075FD640217F2FBA00D8277E /* Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
+		075FD642217F444500D8277E /* SnakeBodyPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeBodyPart.swift; sourceTree = "<group>"; };
+		075FD644217F469600D8277E /* SnakeHead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnakeHead.swift; sourceTree = "<group>"; };
+		075FD646217F477600D8277E /* Snake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +108,16 @@
 			isa = PBXGroup;
 			children = (
 				075FD60C217F113800D8277E /* AppDelegate.swift */,
-				075FD60E217F113900D8277E /* GameScene.sks */,
-				075FD610217F113900D8277E /* Actions.sks */,
 				075FD612217F113900D8277E /* GameScene.swift */,
 				075FD614217F113900D8277E /* GameViewController.swift */,
 				075FD616217F113900D8277E /* Main.storyboard */,
 				075FD619217F115500D8277E /* Assets.xcassets */,
 				075FD61B217F115500D8277E /* LaunchScreen.storyboard */,
 				075FD61E217F115500D8277E /* Info.plist */,
+				075FD640217F2FBA00D8277E /* Apple.swift */,
+				075FD646217F477600D8277E /* Snake.swift */,
+				075FD642217F444500D8277E /* SnakeBodyPart.swift */,
+				075FD644217F469600D8277E /* SnakeHead.swift */,
 			);
 			path = L8_TsygankovaTatiana;
 			sourceTree = "<group>";
@@ -239,10 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				075FD618217F113900D8277E /* Main.storyboard in Resources */,
-				075FD60F217F113900D8277E /* GameScene.sks in Resources */,
 				075FD61A217F115500D8277E /* Assets.xcassets in Resources */,
 				075FD61D217F115500D8277E /* LaunchScreen.storyboard in Resources */,
-				075FD611217F113900D8277E /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075FD645217F469600D8277E /* SnakeHead.swift in Sources */,
+				075FD641217F2FBA00D8277E /* Apple.swift in Sources */,
 				075FD613217F113900D8277E /* GameScene.swift in Sources */,
 				075FD615217F113900D8277E /* GameViewController.swift in Sources */,
+				075FD643217F444500D8277E /* SnakeBodyPart.swift in Sources */,
+				075FD647217F477600D8277E /* Snake.swift in Sources */,
 				075FD60D217F113800D8277E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
