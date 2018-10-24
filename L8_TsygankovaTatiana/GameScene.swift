@@ -113,13 +113,18 @@ extension GameScene: SKPhysicsContactDelegate {
                 snake?.addBodyPart()
                 apple?.removeFromParent()
                 createApple()
-        case CollisionCategories.EdgeBody:
-            snake?.removeFromParent()
-            apple?.removeFromParent()
-            createApple()
-            createSnake()
-        default:
-            break
+            case CollisionCategories.EdgeBody:
+                snake?.removeFromParent()
+                apple?.removeFromParent()
+                createApple()
+                createSnake()
+            case CollisionCategories.Snake:
+                snake?.removeFromParent()
+                apple?.removeFromParent()
+                createApple()
+                createSnake()
+            default:
+                break
         }
     }
 }
