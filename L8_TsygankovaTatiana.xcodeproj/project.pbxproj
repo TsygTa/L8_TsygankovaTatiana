@@ -107,6 +107,7 @@
 		075FD60B217F113800D8277E /* L8_TsygankovaTatiana */ = {
 			isa = PBXGroup;
 			children = (
+				3F2CA45C2180E64B00270F7D /* Objects */,
 				075FD60C217F113800D8277E /* AppDelegate.swift */,
 				075FD612217F113900D8277E /* GameScene.swift */,
 				075FD614217F113900D8277E /* GameViewController.swift */,
@@ -114,10 +115,6 @@
 				075FD619217F115500D8277E /* Assets.xcassets */,
 				075FD61B217F115500D8277E /* LaunchScreen.storyboard */,
 				075FD61E217F115500D8277E /* Info.plist */,
-				075FD640217F2FBA00D8277E /* Apple.swift */,
-				075FD646217F477600D8277E /* Snake.swift */,
-				075FD642217F444500D8277E /* SnakeBodyPart.swift */,
-				075FD644217F469600D8277E /* SnakeHead.swift */,
 			);
 			path = L8_TsygankovaTatiana;
 			sourceTree = "<group>";
@@ -138,6 +135,17 @@
 				075FD634217F115600D8277E /* Info.plist */,
 			);
 			path = L8_TsygankovaTatianaUITests;
+			sourceTree = "<group>";
+		};
+		3F2CA45C2180E64B00270F7D /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				075FD640217F2FBA00D8277E /* Apple.swift */,
+				075FD642217F444500D8277E /* SnakeBodyPart.swift */,
+				075FD646217F477600D8277E /* Snake.swift */,
+				075FD644217F469600D8277E /* SnakeHead.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
