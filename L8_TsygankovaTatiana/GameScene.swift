@@ -89,8 +89,8 @@ class GameScene: SKScene {
     }
     
     func createApple() {
-        let randX = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxX-10))+5)
-        let randY = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxY-50))+45)
+        let randX = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxX-5))+1)
+        let randY = CGFloat(arc4random_uniform(UInt32(view!.scene!.frame.maxY-5))+1)
         
         apple = Apple(position: CGPoint(x: randX, y: randY))
         addChild(apple!)
