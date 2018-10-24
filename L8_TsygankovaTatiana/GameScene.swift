@@ -14,6 +14,7 @@ struct CollisionCategories {
     static let SnakeHead: UInt32 = 0x1 << 1
     static let Apple: UInt32 = 0x1 << 2
     static let EdgeBody: UInt32 = 0x1 << 3
+    static let SnakeNeck: UInt32 = 0x1 << 4
 }
 
 class GameScene: SKScene {

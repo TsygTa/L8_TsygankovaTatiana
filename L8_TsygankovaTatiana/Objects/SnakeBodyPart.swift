@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 
 class SnakeBodyPart: SKShapeNode {
+    static var partCount = 0
     let diameter = 10.0
     init(atPoint point: CGPoint) {
         super.init()
@@ -20,7 +21,7 @@ class SnakeBodyPart: SKShapeNode {
         self.position = point
         self.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(diameter-4), center: CGPoint(x: 5, y: 5))
         self.physicsBody?.isDynamic = true
-        self.physicsBody?.categoryBitMask = CollisionCategories.Snake
+        self.physicsBody?.categoryBitMask = SnakeBodyPart.partCount >= 2 ? CollisionCategories.Snake : CollisionCategories.SnakeNeck
         self.physicsBody?.contactTestBitMask = CollisionCategories.EdgeBody | CollisionCategories.Apple
     }
     required init?(coder aDecoder: NSCoder) {

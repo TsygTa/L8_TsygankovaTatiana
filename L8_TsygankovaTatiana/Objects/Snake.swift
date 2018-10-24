@@ -19,13 +19,15 @@ class Snake: SKShapeNode {
     convenience init(atPoint point: CGPoint) {
         self.init()
         let head = SnakeHead(atPoint: point)
+        SnakeBodyPart.partCount = 1
         body.append(head)
         addChild(head)
     }
     
     func addBodyPart() {
-        let newBodyPart = SnakeBodyPart(atPoint: body[0].position)
+        let newBodyPart = SnakeBodyPart(atPoint: body[body.count-1].position)
         body.append(newBodyPart)
+        SnakeBodyPart.partCount += 1
         addChild(newBodyPart)
     }
     
